@@ -11,7 +11,7 @@ function renderFormElements(
     return formData.map((field) => {
         if (field.type === 'separator')
             return (
-                <div>
+                <div key={field.id}>
                     <h2 className="mt-12 mb-6 text-xl">{field.label}</h2>
                 </div>
             );
@@ -95,7 +95,7 @@ function getFieldInput(
     if (field.type === 'checkbox') {
         return (
             <div className="flex flex-col gap-3">
-                {field.options.map((option, i) => (
+                {field.options.map((option) => (
                     <div key={option.value}>
                         <input
                             type="checkbox"
