@@ -4,6 +4,8 @@ This is a react project with TypeScript that generate a form from an object.
 
 The problem I tried to solve is create a form with a lot of fields ia a flexible way.
 
+Repo: https://github.com/matteo-naif/form-generator
+
 ## Installation
 
 Use the npm command to install dependencies.
