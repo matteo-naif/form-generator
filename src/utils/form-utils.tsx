@@ -7,7 +7,7 @@ function renderFormElements(
     formData: FormDataModel[],
     errors: FieldErrorsImpl<any>,
     register: UseFormRegister<any>
-): ReactNode {
+): ReactNode[] {
     return formData.map((field) => {
         if (field.type === 'separator')
             return (
