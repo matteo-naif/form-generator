@@ -1,11 +1,10 @@
 import { yupResolver } from '@hookform/resolvers/yup';
-import { useForm, UseFormProps, UseFormReturn } from 'react-hook-form';
+import { useForm, type UseFormProps, type UseFormReturn } from 'react-hook-form';
 import { it, describe, expect } from 'vitest';
 import { Yup } from '../config/yup';
-import { FormDataModel } from '../models/formData';
 import { createYupSchema, renderFormElements } from './form-utils';
-import { renderHook } from '@testing-library/react-hooks';
-import { render, screen, userEvent } from '../utils/test-utils';
+import { renderHook } from '@testing-library/react';
+import type { FormDataModel } from '../models/formData';
 
 describe('Form utils', () => {
     describe('renderFormElements', () => {

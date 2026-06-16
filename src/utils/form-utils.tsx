@@ -1,7 +1,7 @@
-import { ReactNode } from 'react';
-import { FieldErrorsImpl, UseFormRegister } from 'react-hook-form';
-import { FormDataModel } from '../models/formData';
-import { BaseSchema } from 'yup';
+import type { Schema } from "yup";
+import type { FormDataModel } from "../models/formData";
+import type { FieldErrorsImpl, UseFormRegister } from "react-hook-form";
+import type { ReactNode } from "react";
 
 function renderFormElements(
     formData: FormDataModel[],
@@ -123,7 +123,7 @@ function getFormSchema(schema: any, config: any) {
         validations,
     }: {
         id: string;
-        validations: BaseSchema;
+        validations: Schema;
     } = config;
 
     if (!validations) return schema;
@@ -133,7 +133,7 @@ function getFormSchema(schema: any, config: any) {
 }
 
 function createYupSchema(formData: FormDataModel[]) {
-    return formData.reduce(getFormSchema, {});
+    return formData.reduce((accumulator, element) => getFormSchema(accumulator, element), {});
 }
 
 export { renderFormElements, createYupSchema };

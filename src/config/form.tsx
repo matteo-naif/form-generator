@@ -1,4 +1,4 @@
-import { FormDataModel } from '../models/formData';
+import type { FormDataModel } from '../models/formData';
 import { Yup } from './yup';
 
 export const formData: FormDataModel[] = [

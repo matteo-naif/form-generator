@@ -8,12 +8,10 @@ function App() {
     const onSubmit = (data: any) => setData(data);
 
     return (
-        <>
-            <div className="grid grid-cols-2 gap-12 max-w-5xl mx-auto m-6">
-                <FormUser onSubmit={onSubmit} formData={formData} />
-                <FormResult data={data} />
-            </div>
-        </>
+        <div className="grid grid-cols-2 gap-12 max-w-5xl mx-auto m-6">
+            <FormUser onSubmit={onSubmit} formData={formData} />
+            <FormResult data={data} />
+        </div>
     );
 }
 

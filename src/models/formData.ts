@@ -1,5 +1,5 @@
-import { HTMLInputTypeAttribute } from 'react';
-import { BaseSchema } from 'yup';
+import type { HTMLInputTypeAttribute } from "react";
+import type { Schema } from "yup";
 
 type FormBaseModel = {
     id: string;
@@ -11,7 +11,7 @@ type FormDataSeparatorModel = {
 };
 
 type FormControllerBaseModel = {
-    validations: BaseSchema;
+    validations: Schema;
 };
 
 type FormInputModel = FormControllerBaseModel & {
