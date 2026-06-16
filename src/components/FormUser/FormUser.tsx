@@ -1,8 +1,8 @@
 import { yupResolver } from '@hookform/resolvers/yup';
-import { useForm, UseFormProps } from 'react-hook-form';
+import { useForm, type UseFormProps } from 'react-hook-form';
 import { Yup } from '../../config/yup';
-import { FormDataModel } from '../../models/formData';
 import { createYupSchema, renderFormElements } from '../../utils/form-utils';
+import type { FormDataModel } from '../../models/formData';
 
 type Props = {
     onSubmit: (data: any) => void;
@@ -28,13 +28,11 @@ const FormUser = ({ onSubmit, formData }: Props) => {
             <h2 className="text-xl mb-6">Form</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
                 {renderFormElements(formData, errors, register)}
-                <button
-                    role={'button'}
+                <input
                     className="bg-teal-900 text-white px-4 py-2 rounded-lg active:bg-teal-700"
                     type="submit"
-                >
-                    Submit
-                </button>
+                    value="Submit"
+                />
             </form>
         </div>
     );
